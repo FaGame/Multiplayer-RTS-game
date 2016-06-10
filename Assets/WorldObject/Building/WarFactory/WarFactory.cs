@@ -12,7 +12,7 @@
 	protected override void Start ()
 	{
 		base.Start();
-		actions = new string[] { "Tank", "ConvoyTruck", "Panzer I", "Panzer II", "Panzer III", "Panzer IV" };
+		actions = new string[] { "ConvoyTruck", "Panzer I", "Panzer II", "Panzer III", "Panzer IV" };
 	}
 
 	public override void PerformAction(string actionToPerform)

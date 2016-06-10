@@ -5,13 +5,14 @@ using UnityEngine.EventSystems;
 public class MiniMap : MonoBehaviour, IPointerDownHandler {
 
     private Vector3 clickMousePos;
-
+    public int offsetX;
+    public int offsetY;
   
 
     public void OnPointerDown(PointerEventData ped)
     {
         Vector3 localHit = transform.InverseTransformPoint(ped.pressPosition);
-        clickMousePos = new Vector3((1000 / 256) * localHit.x + 50, Camera.main.transform.position.y, (1000 / 256) * localHit.y - 20);
+        clickMousePos = new Vector3((1000 / 256) * localHit.x + offsetX, Camera.main.transform.position.y, (1000 / 256) * localHit.y - offsetY);
         Camera.main.transform.position = clickMousePos;
     }
 }
